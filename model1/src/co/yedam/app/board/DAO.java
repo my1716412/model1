@@ -17,9 +17,9 @@ import javax.sql.DataSource;
  *
  */
 public class DAO {
-	Connection conn;
-	PreparedStatement psmt;
-	ResultSet rs;
+	protected Connection conn;
+	protected PreparedStatement psmt;
+	protected ResultSet rs;
 	DataSource ds;  //컨넥션 POOL 사용을 위한 데이터연결 생성 객체
 	
 	private String driver = "oracle.jdbc.driver.OracleDriver";

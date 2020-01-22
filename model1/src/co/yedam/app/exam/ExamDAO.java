@@ -7,18 +7,13 @@ import co.yedam.app.board.DAO;
 
 public class ExamDAO extends DAO {
 
-	//�߰�
+	//추가
 	public int insert(ExamDTO dto) {
-
-		int rs = 0;
-
+		int r = 0;
 		try { 
-
 			String sql = "insert into exam(exam_no, exam_nm, quest_cnt, exam_time, quest_group, exam_desc, exam_type)"
 					+" values((select nvl(max(exam_no), 0)+1 from exam ),?,?,?,?,?,?)";
-
-			psmt = conn.prepareStatement(sql);
-			
+			psmt = conn.prepareStatement(sql);			
 			psmt.setString(1, dto.getExamNm());
 			psmt.setInt(2, dto.getQuestCnt());
 			psmt.setInt(3, dto.getExamTime());
@@ -36,7 +31,7 @@ public class ExamDAO extends DAO {
 		return r;
 	}
 
-	//����
+	//수정
 	public int Update(ExamDTO dto) {
 
 		int r = 0;
@@ -67,7 +62,7 @@ public class ExamDAO extends DAO {
 	}
 
  
-	//����
+	//삭제
 	public int delete(ExamDTO dto) {
 
 		int r = 0;
@@ -89,7 +84,7 @@ public class ExamDAO extends DAO {
 		return r;
 	}
 
-//�ܰ���ȸ
+//단건조회
 
 	public ExamDTO selectOne(int no) {
 		ExamDTO dto = new ExamDTO();
@@ -121,7 +116,7 @@ public class ExamDAO extends DAO {
 		return dto;
 	}
 
-//���
+//목록
 
 	public List<ExamDTO> selectList() {
 
