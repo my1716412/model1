@@ -3,8 +3,6 @@ package co.yedam.app.common;
 import java.io.IOException;
 import java.util.HashMap;
 
-import javax.security.auth.message.callback.PrivateKeyCallback.Request;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,15 +10,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import co.yedam.app.board.BoardCommandCreateForm;
-import co.yedam.app.board.BoardCommandSelectList;
+import co.yedam.app.exam.ExamCommandCreate;
+import co.yedam.app.exam.ExamCommandCreateForm;
+import co.yedam.app.quest.QuestCommandCreate;
+import co.yedam.app.quest.QuestCommandCreateForm;
 
-//@WebServlet("*.do") // localhost/model1/ /// .do
-public class NewFrontController extends HttpServlet {
+@WebServlet("*.do") // localhost/model1/ /// .do
+public class Controller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	HashMap<String, Command> cont = new HashMap<String, Command>();
 
-	public NewFrontController() {
+	public Controller() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -33,9 +33,11 @@ public class NewFrontController extends HttpServlet {
 		// 삭제
 		// 상세보기
 		// 목록
-		cont.put("/boardList", new BoardCommandSelectList());
+		cont.put("/examForm.do", new ExamCommandCreateForm());
+		cont.put("/examSubmit.do", new ExamCommandCreate());
 		// 수정폼
-		cont.put("/boardCreateForm", new BoardCommandCreateForm());
+		cont.put("/questForm.do", new QuestCommandCreateForm());
+		cont.put("/questSubmit.do", new QuestCommandCreate());
 		// 등록폼
 
 		// member

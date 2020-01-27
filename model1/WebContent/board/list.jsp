@@ -29,11 +29,11 @@
 
 <c:forEach items="${list}" var="dto">
 <tr>
-<td>${ dto.getNo()}</td>
-<td><a href="view.jsp?c_no=${ dto.getNo()%}">${ dto.getSubject()}</a></td>
-<td>${dto.getPoster()}</td>
-<td>${dto.getLastpost()}</td>
-<td>${dto.getViews()}</td>
+<td>${ dto.no}</td>
+<td><a href="view.jsp?c_no=${ dto.no}">${ dto.subject}</a></td>
+<td>${dto.poster}</td>
+<td>${dto.lastpost}</td>
+<td>${dto.views}</td>
 </tr>
 <%--		
 		/*

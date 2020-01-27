@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>시험목록</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<style>
+body {
+	margin: 0;
+	padding: 0;
+}
+
+#webView {
+	overflow: hidden;
+	position: relative;
+	background:;
+	width: 1200px;
+	height: 600px;
+	margin: 0 auto;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0)
+}
+
+#webView[data-show-memo='true'] {
+	overflow: visible
+}
+</style>
+<!-- 스타일시트 link -->
+<link href="./css/view.css" rel="stylesheet" type="text/css">
+<link href="./css/base.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<!-- view 종료 -->
+	<div id="webView" data-canvas="true" data-show-memo="false" data-show-link="false">
+		<!-- 시험목록 타이틀 시작 -->
+		<div data-obj-id="xIbS2" data-obj-type="element" data-text-editable="true" class="" style="position: absolute; top: 62px; left: 76px; width: 300px; height: 36px;">
+			<div data-text-content="true" style="font-weight: bold; font-size: 24px" class="">시험목록</div>
+		</div>
+		<!-- 시험목록 타이틀 종료 -->
+		
+		<!-- 검색조건 백그라운드 컬러 시작 -->
+		<div data-obj-id="UTiZ2" data-obj-type="element" data-text-editable="true" class="" style="position: absolute; top: 113px; left: 74px; width: 993px; height: 104px;">
+			<div data-text-content="true" style="background-color: rgb(224, 224, 224);"></div>
+		</div>
+		<!-- 검색조건 백그라운드 컬러 종료 -->
+		
+		<!-- 검색조건 시작 -->
+		<div data-obj-id="st0R4" data-obj-type="element" data-text-editable="true" class="" style="position: absolute; top: 132px; left: 104px; width: 74px; height: 20px;">
+			<div data-text-content="true" style="font-size: 16px;" class="">응시여부</div>
+		</div>
+		<div data-obj-type="group" data-obj-id="VgKZQ" class="" style="position: absolute; left: 216px; top: 134px; width: 289px; height: 20px;">
+			<div data-obj-id="WhQQJ" data-obj-type="element" style="position: absolute; top: 0px; left: 0px; width: 20px; height: 20px;" class="">
+				<label data-form-control="radio" data-min-width="20" data-min-height="20"><input type="checkbox" checked="checked"><span data-form-decorator="true"></span></label>
+			</div>
+			<div data-obj-id="yrJaR" data-obj-type="element" data-text-editable="true" style="position: absolute; top: 0px; left: 32px; width: 257px; height: 20px;" class="">
+				<div data-text-content="true" style="font-size: 16px;" class="">전체</div>
+			</div>
+		</div>
+		<div data-obj-type="group" data-obj-id="vlWg1" class="" style="position: absolute; left: 310px; top: 134px; width: 290px; height: 20px;">
+			<div data-obj-id="ssAek" data-obj-type="element" style="position: absolute; top: 0px; left: 0px; width: 20px; height: 20px;" class="">
+				<label data-form-control="radio" data-min-width="20" data-min-height="20"><input type="checkbox" checked="checked"><span data-form-decorator="true"></span></label>
+			</div>
+			<div data-obj-id="NBtjU" data-obj-type="element" data-text-editable="true" style="position: absolute; top: 0px; left: 32px; width: 257px; height: 20px;" class="">
+				<div data-text-content="true" style="font-size: 16px;" class="">미응시</div>
+			</div>
+		</div>
+		<div data-obj-type="group" data-obj-id="vF3yS" class="" style="position: absolute; left: 419px; top: 134px; width: 284px; height: 20px;">
+			<div data-obj-id="PisCf" data-obj-type="element" style="position: absolute; top: 0px; left: 0px; width: 19.5862px; height: 20px;" class="">
+				<label data-form-control="radio" data-min-width="20" data-min-height="20"><input type="checkbox" checked="checked"><span data-form-decorator="true"></span></label>
+			</div>
+			<div data-obj-id="UiAvu" data-obj-type="element" data-text-editable="true" style="position: absolute; top: 0px; left: 31.3379px; width: 252.662px; height: 20px;" class="">
+				<div data-text-content="true" style="font-size: 16px;" class="">응시</div>
+			</div>
+		</div>
+		<div data-obj-id="G0trr" data-obj-type="element" data-text-editable="true" class="" style="position: absolute; top: 173px; left: 104px; width: 74px; height: 20px;">
+			<div data-text-content="true" style="font-size: 16px;" class="">시험종목</div>
+		</div>
+		<div data-obj-id="h89va" data-obj-type="element" data-text-editable="true" class="" style="position: absolute; top: 166px; left: 216.008px; width: 150px; height: 40px;">
+			<div data-text-content="true" data-min-width="80" data-min-height="30" style="border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; border: 1px solid #ccc; box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075); background-color: rgb(255, 255, 255); line-height: 40px;" class="">데이터베이스</div>
+			<div style="position: absolute; top: 50%; right: 5px; margin-top: -12px; width: 15px; height: 15px;" class="">
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32" fill="#000000" data-svg-content="true">
+					<g>
+						<path d="M 8.998,20l 13.966,0 c 0.286,0, 0.54-0.138, 0.72-0.352l 0.004,0.004c 0.39-0.434, 0.39-1.138,0-1.572L 16.69,10.326 c-0.39-0.434-1.022-0.434-1.41,0c-0.010,0.012-0.014,0.028-0.024,0.040L 8.272,18.080c-0.39,0.434-0.39,1.138,0,1.572 C 8.276,19.656, 8.28,19.658, 8.284,19.662C 8.466,19.87, 8.716,20, 8.998,20z"></path>
+					</g>
+				</svg>
+			</div>
+			<div style="position: absolute; top: 50%; right: 5px; width: 15px; height: 15px;" class="">
+				<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32" fill="#000000" data-svg-content="true">
+					<g>
+						<path d="M 16.682,19.674c 0.010-0.012, 0.014-0.028, 0.024-0.040l 6.982-7.714c 0.39-0.434, 0.39-1.138,0-1.572 c-0.004-0.004-0.008-0.006-0.012-0.008C 23.496,10.13, 23.244,10, 22.964,10L 8.998,10 c-0.286,0-0.54,0.138-0.722,0.352L 8.272,10.348 c-0.39,0.434-0.39,1.138,0,1.572l 6.998,7.754C 15.66,20.108, 16.292,20.108, 16.682,19.674z"></path>
+					</g>
+				</svg>
+			</div>
+		</div>
+		<div data-obj-id="7YTGb" data-obj-type="element" data-text-editable="true" class="" style="position: absolute; top: 175px; left: 452px; width: 74px; height: 20px;">
+			<div data-text-content="true" style="font-size: 16px;" class="">시험명</div>
+		</div>
+		<div data-obj-id="zPCYH" data-obj-type="element" data-text-editable="true" class="" style="position: absolute; top: 167px; left: 520px; width: 176px; height: 40px;">
+			<input type="text" data-min-width="60" data-min-height="30" data-text-content="true" value="내용을 입력해주세요" style="color: rgb(94, 94, 94);">
+		</div>		
+		<!-- 검색조건 종료 -->
+		
+		<!-- 초기화 버튼 시작 -->
+		<div data-obj-id="qnwl1" data-obj-type="element" data-text-editable="true" class="" style="position: absolute; top: 124px; left: 946px; width: 100px; height: 40px;">
+			<div data-text-content="true" style="font-size: 16px; color: rgb(255, 255, 255); text-align: center; line-height: 2.5em; border-radius: 4px; background-color: rgb(241, 196, 15);" class="">초기화</div>
+		</div>
+		<!-- 초기화 버튼 종료 -->
+		
+		<!-- 검색 버튼 시작 -->
+		<div data-obj-id="10D9d" data-obj-type="element" data-text-editable="true" class="" style="position: absolute; top: 169px; left: 947px; width: 100px; height: 40px;">
+			<div data-text-content="true" style="font-size: 16px; color: rgb(255, 255, 255); text-align: center; line-height: 2.5em; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(52, 152, 219);" class="">검색</div>
+		</div>		
+		<!-- 검색 버튼 종료 -->
+		
+		<!-- 문제등록 시작 -->
+		<div data-obj-id="GP29i" data-obj-type="element"
+			data-text-editable="true" class=""
+			style="position: absolute; top: 227px; left: 804px; width: 122px; height: 40px;"
+			data-link-to="page:b9zFB">
+			<div data-text-content="true"
+				style="font-size: 16px; color: rgb(255, 255, 255); text-align: center; line-height: 2.5em; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(52, 152, 219);"
+				class="">문제등록</div>
+		</div>
+		<!-- 문제등록 종료 -->	
+			
+		<!-- 시험지등록 시작 -->
+		<div data-obj-id="O5Xp2" data-obj-type="element"
+			data-text-editable="true" class=""
+			style="position: absolute; top: 227px; left: 938px; width: 128px; height: 40px;"
+			data-link-to="page:gi8Rv">
+			<div data-text-content="true"
+				style="font-size: 16px; color: rgb(255, 255, 255); text-align: center; line-height: 2.5em; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(52, 152, 219);"
+				class="">시험지 등록</div>
+		</div>
+		<!-- 시험지등록 종료 -->		
+		
+		<!-- 시험목록 시작 -->
+		<div data-obj-id="0yXAJ" data-obj-type="element" data-text-editable="true" class="" style="position: absolute; top: 274px; left: 77px; width: 990px; height: 225px;">
+			<table data-text-content="true" class="table_board">
+				<tbody>
+					<tr>
+						<th>No.</th>
+						<th>시험종목</th>
+						<th>시험명</th>
+						<th>응시여부</th>
+					</tr>
+					<tr>
+						<td>89</td>
+						<td>데이터베이스</td>
+						<td>3월 정기시험&nbsp;</td>
+						<td><input type="button" value="응시하기" style="font-size: 13px; color: rgb(255, 255, 255); text-align: center; line-height: 2.5em; border-radius: 4px; background-color: rgb(94, 94, 94);" /></td>
+					</tr>
+					<tr>
+						<td>88</td>
+						<td>프로그래밍&nbsp;</td>
+						<td>&nbsp;진급시험</td>
+						<td><input type="button" value="결과확인" style="font-size: 12px; color: rgb(255, 255, 255); text-align: center; line-height: 2em; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(52, 152, 219);" /></td>
+					</tr>
+					<tr>
+						<td>87</td>
+						<td>운영체제&nbsp;</td>
+						<td>3월 정기시험&nbsp;</td>
+						<td><input type="button" value="응시하기" style="font-size: 13px; color: rgb(255, 255, 255); text-align: center; line-height: 2.5em; border-radius: 4px; background-color: rgb(94, 94, 94);" /></td>
+					</tr>
+					<tr>
+						<td>86</td>
+						<td>&nbsp;프로그래밍</td>
+						<td>&nbsp;신입사원 레벨 테스트</td>
+						<td><input type="button" value="결과확인" style="font-size: 12px; color: rgb(255, 255, 255); text-align: center; line-height: 2em; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(52, 152, 219);" /></td>
+					</tr>
+					<tr>
+						<td>85</td>
+						<td>정보기초&nbsp;</td>
+						<td>&nbsp;신입사원 레벨 테스트</td>
+						<td><input type="button" value="응시하기" style="font-size: 13px; color: rgb(255, 255, 255); text-align: center; line-height: 2.5em; border-radius: 4px; background-color: rgb(94, 94, 94);" /></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!-- 시험목록 종료-->
+
+		<!-- 페이징 시작(구현시 html로 대체) -->
+		<div data-obj-id="XRkHC" data-obj-type="group" class="" style="position: absolute; top: 519px; left: 402px; width: 280px; height: 40px;">
+			<div data-obj-id="KdSSx" data-obj-type="element" data-text-editable="true" class="" style="position: absolute; top: 0px; left: 0px; width: 40px; height: 40px;">
+				<div data-text-content="true" style="font-size: 16px; color: rgb(127, 127, 127); text-align: center; line-height: 2.6em; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(244, 244, 244);" class="" spellcheck="false">&lt;</div>
+			</div>
+			<div data-obj-id="jkm1V" data-obj-type="element" data-text-editable="true" class="" style="position: absolute; top: 0px; left: 48px; width: 40px; height: 40px;">
+				<div data-text-content="true" style="font-size: 16px; color: rgb(64, 64, 64); text-align: center; line-height: 2.6em; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(244, 244, 244);" class="">1</div>
+			</div>
+			<div data-obj-id="EWph5" data-obj-type="element" data-text-editable="true" class="" style="position: absolute; top: 0px; left: 96px; width: 40px; height: 40px;">
+				<div data-text-content="true" style="font-size: 16px; color: rgb(255, 255, 255); text-align: center; line-height: 2.6em; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(52, 152, 219);" class="">2</div>
+			</div>
+			<div data-obj-id="JgEVZ" data-obj-type="element" data-text-editable="true"
+				style="position: absolute; top: 0px; left: 144px; width: 40px; height: 40px;">
+				<div data-text-content="true" style="font-size: 16px; color: rgb(64, 64, 64); text-align: center; line-height: 2.6em; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(244, 244, 244);" class="">3</div>
+			</div>
+			<div data-obj-id="Bf2g6" data-obj-type="element" data-text-editable="true" class="" style="position: absolute; top: 0px; left: 192px; width: 40px; height: 40px;">
+				<div data-text-content="true" style="font-size: 16px; color: rgb(64, 64, 64); text-align: center; line-height: 2.6em; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(244, 244, 244);" class="">4</div>
+			</div>
+			<div data-obj-id="x5A4k" data-obj-type="element" data-text-editable="true" style="position: absolute; top: 0px; left: 240px; width: 40px; height: 40px;">
+				<div data-text-content="true" style="font-size: 16px; color: rgb(127, 127, 127); text-align: center; line-height: 2.6em; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; background-color: rgb(244, 244, 244);" class="">&gt;</div>
+			</div>
+		</div>	
+		<!-- 페이징 종료(구현시 html로 대체) -->	
+	</div>
+	<!-- view 종료 -->
+</body>
+</html>
