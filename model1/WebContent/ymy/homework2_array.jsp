@@ -14,12 +14,30 @@
 	}
 	function funcAdd(){
 		//배열에 추가하고 배열을 div에 출력
+		var str = document.getElementById("txtFruit").value;
+		txtArr[txtArr.length] = str;
+		document.getElementById("result").innerHTML = txtArr;
+		document.getElementById("txtFruit").value = "";
 	}
 	function funcDelete(){
 		//배열에서 삭제하고 배열을 div에 출력
+		var str = document.getElementById("txtFruit").value;
+		for(var i=0; i<txtArr.length; i++){
+			if(txtArr[i] == str){
+				const idx = txtArr.indexOf(str);
+				if(idx > -1){
+					txtArr.splice(idx, 1);
+				}
+			}
+		}
+		document.getElementById("result").innerHTML = txtArr;
+		document.getElementById("txtFruit").value = "";		
 	}	
 	function funcSearch(){
 		//배열에서 검색해서 검색위치를 div출력
+		var str = document.getElementById("txtFruit").value;
+		const idx = txtArr.indexOf(str);
+		document.getElementById("result").innerHTML = idx + "번째 위치";
 	}		
 </script>
 </head>
