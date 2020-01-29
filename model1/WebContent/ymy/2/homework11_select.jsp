@@ -8,7 +8,20 @@
 		//확인 버튼 이벤트 		
 		btn.addEventListener("click", function(){
 			//선택과목 수와 선택과목명을 div에 출력(다중선택이 가능함)
-			
+		    var obj = document.getElementById("subject");
+			var result;
+		    var cnt = 0;
+		    let subjectArr = [];
+		    
+		    for (i = 0; i < obj.length; i++) {
+		    	if (obj[i].selected) {
+		    		subjectArr[cnt] = obj[i].label;
+		    		cnt++;
+		    	}
+		    }
+		    result = "선택과목 수 : " + cnt;
+		    result += "<br/>선택과목명 : " + subjectArr;
+		    document.getElementById("result").innerHTML = result;
 		});
 	});
 </script>

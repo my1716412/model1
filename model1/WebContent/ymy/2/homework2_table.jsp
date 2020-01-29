@@ -18,12 +18,12 @@ td {
 	window.addEventListener("load", function() {
 		//tr 태그에 더블클릭 이벤트 지정 . 선택한 행을 오른쪽으로 이동
 		var trs = document.querySelectorAll("#tbl1 tr");
-		var tblBody = document.querySelectorAll("#tbl2 body");
+		var tblBody = document.querySelectorAll("#tbl2 tbody");
 		for(i=0; i<trs.length; i++) {
-			trs[i].addEventListener("dblclick",function(){				
+			trs[i].addEventListener("dblclick",function(){			
 				tblBody[0].appendChild(this);
 				//이벤트 지정 다시 지정(두번째 테이블에서 이동 이벤트 핸들러 수정)
-				tblBody[0].removeEventListener
+				this.removeEventListener("dblclick", arguments.callee);
 			})
 		}
 	})
