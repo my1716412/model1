@@ -14,8 +14,9 @@ import javax.servlet.http.HttpServletResponse;
 
 import co.yedam.app.board.BoardCommandCreateForm;
 import co.yedam.app.board.BoardCommandSelectList;
+import co.yedam.app.boardAjax.AjaxBoardList;
 
-//@WebServlet("*.do") // localhost/model1/ /// .do
+@WebServlet("*.do") // localhost/model1/ /// .do
 public class NewFrontController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	HashMap<String, Command> cont = new HashMap<String, Command>();
@@ -41,8 +42,11 @@ public class NewFrontController extends HttpServlet {
 		// member
 		// cont.put("/index.do", new IndexCommand()); // 홈페이지 호출
 
+		// ajax
+				cont.put("/AjaxBoardList.do", new AjaxBoardList());
 	}
 
+	@SuppressWarnings("unused")
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// 실행할 class객체를 찾아주는 부문 get()
@@ -57,11 +61,21 @@ public class NewFrontController extends HttpServlet {
 		String page = null;
 		response.setContentType("text/html; charset=EUC-KR");
 		if (commandImpl != null) {
-			page = commandImpl.excute(request, response);
-			request.getRequestDispatcher(page).forward(request, response);
+			if (page != null && !page.isEmpty()) {
+				if (page.startsWith("redirect:")) {
+					String view = page.substring(9);
+					response.sendRedirect(view);
+
+				} else if (page.startsWith("ajax")) {
+					response.getWriter().append(page.substring(5));
+				} else if (page.startsWith("script")) {
+					response.getWriter().append("<script>").append(page.substring(7)).append("</script>");
+				} else {
+					request.getRequestDispatcher(page).forward(request, response);
+				}
+			}
 		} else {
 			response.getWriter().append("잘못된요청");
 		}
 	}
-
 }

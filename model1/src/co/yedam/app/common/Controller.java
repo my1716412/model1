@@ -10,12 +10,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import co.yedam.app.boardAjax.AjaxBoardList;
 import co.yedam.app.exam.ExamCommandCreate;
 import co.yedam.app.exam.ExamCommandCreateForm;
 import co.yedam.app.quest.QuestCommandCreate;
 import co.yedam.app.quest.QuestCommandCreateForm;
 
-@WebServlet("*.do") // localhost/model1/ /// .do
+//@WebServlet("*.do") // localhost/model1/ /// .do
 public class Controller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	HashMap<String, Command> cont = new HashMap<String, Command>();
@@ -43,6 +44,8 @@ public class Controller extends HttpServlet {
 		// member
 		// cont.put("/index.do", new IndexCommand()); // 홈페이지 호출
 
+		// ajax
+		cont.put("/AjaxBoardList.d0", new AjaxBoardList());
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)

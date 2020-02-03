@@ -18,6 +18,9 @@ public class BoardDTO {
 		this.poster = poster;
 		this.subject = subject;
 	}
+	public BoardDTO(int no2) {
+		// TODO Auto-generated constructor stub
+	}
 	@Override
 	public String toString() {
 		return "BoardDTO [no=" + no + ", poster=" + poster + ", subject=" + subject + ", contents=" + contents

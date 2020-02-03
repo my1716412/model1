@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators defaultdir="/template">
+    <decorator name="basic-theme" page="layout.jsp">
+        <pattern>*.do</pattern>    //사용자 관리자 모드 경로 따로 설정
+    </decorator>
+</decorators>
