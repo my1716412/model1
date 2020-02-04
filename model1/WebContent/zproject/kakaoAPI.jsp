@@ -104,8 +104,10 @@
 							dataType: "json",
 							data: { //ajax호출시 넘길 파라미터 셋팅
 								kakaoid			: res.id,				
-								kakaoemail		: res.kaccount_email,
-								kakaonickname	: res.properties.nickname
+								kakaoemail		: res.kakao_account.email,
+								kakaonickname	: res.properties.nickname,
+								gender			: res.kakao_account.gender,
+								birthday		: res.kakao_account.birthday
 							},
 							//비동기통신 호출 성공(ajax 호출성공)
 						    success:function(result){

@@ -5,7 +5,6 @@
 	request.setCharacterEncoding("UTF-8");
 
 	String kakaoId = (String)request.getParameter("kakaoid");
-	System.out.println("# kakaoId : " + kakaoId);
 	
 	//파라메터 출력해보기
 	Map<String, String[]> parameters = request.getParameterMap();
