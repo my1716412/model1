@@ -20,7 +20,7 @@ public class DAO {
 	protected Connection conn;
 	protected PreparedStatement psmt;
 	protected ResultSet rs;
-	DataSource ds;  //컨넥션 POOL 사용을 위한 데이터연결 생성 객체
+	protected DataSource ds;  //컨넥션 POOL 사용을 위한 데이터연결 생성 객체
 	
 	private String driver = "oracle.jdbc.driver.OracleDriver";
 	private String url="jdbc:oracle:thin:@localhost:1521:xe"; //예담학원용

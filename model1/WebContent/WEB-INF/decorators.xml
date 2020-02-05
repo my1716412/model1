@@ -3,4 +3,8 @@
     <decorator name="basic-theme" page="layout.jsp">
         <pattern>*.do</pattern>    //사용자 관리자 모드 경로 따로 설정
     </decorator>
+    <excludes>
+    	<pattern>/ajax/*</pattern>
+    	<pattern>/popup</pattern>
+    </excludes>
 </decorators>

@@ -15,6 +15,12 @@ import javax.servlet.http.HttpServletResponse;
 import co.yedam.app.board.BoardCommandCreateForm;
 import co.yedam.app.board.BoardCommandSelectList;
 import co.yedam.app.boardAjax.AjaxBoardList;
+import co.yedam.app.users.command.DeleteUsers;
+import co.yedam.app.users.command.GetUsers;
+import co.yedam.app.users.command.GetUsersList;
+import co.yedam.app.users.command.InsertUsers;
+import co.yedam.app.users.command.ManageUsers;
+import co.yedam.app.users.command.UpdateUsers;
 
 @WebServlet("*.do") // localhost/model1/ /// .do
 public class NewFrontController extends HttpServlet {
@@ -43,7 +49,17 @@ public class NewFrontController extends HttpServlet {
 		// cont.put("/index.do", new IndexCommand()); // 홈페이지 호출
 
 		// ajax
-				cont.put("/AjaxBoardList.do", new AjaxBoardList());
+		cont.put("/AjaxBoardList.do", new AjaxBoardList());
+
+		// 댓글관리
+
+		// 사용자관리
+		cont.put("/ManageUsers.do", new ManageUsers()); // 사용자관리 페이지
+		cont.put("/ajax/InsertUsers.do", new InsertUsers());
+		cont.put("/ajax/UpdateUsers.do", new UpdateUsers());
+		cont.put("/ajax/DeleteUsers.do", new DeleteUsers());
+		cont.put("/ajax/GetUsers.do", new GetUsers());
+		cont.put("/ajax/GetUsersList.do", new GetUsersList());
 	}
 
 	@SuppressWarnings("unused")
@@ -61,21 +77,23 @@ public class NewFrontController extends HttpServlet {
 		String page = null;
 		response.setContentType("text/html; charset=EUC-KR");
 		if (commandImpl != null) {
+			page = commandImpl.excute(request, response); //실행
 			if (page != null && !page.isEmpty()) {
 				if (page.startsWith("redirect:")) {
 					String view = page.substring(9);
 					response.sendRedirect(view);
 
-				} else if (page.startsWith("ajax")) {
+				} else if (page.startsWith("ajax:")) {
 					response.getWriter().append(page.substring(5));
-				} else if (page.startsWith("script")) {
+				} else if (page.startsWith("script:")) {
 					response.getWriter().append("<script>").append(page.substring(7)).append("</script>");
 				} else {
 					request.getRequestDispatcher(page).forward(request, response);
 				}
+
+			} else {
+				response.getWriter().append("잘못된요청");
 			}
-		} else {
-			response.getWriter().append("잘못된요청");
 		}
 	}
 }

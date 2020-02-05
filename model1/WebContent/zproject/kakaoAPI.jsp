@@ -74,7 +74,6 @@
 							createKakaotalkLogout();	
 							//getKakaotalkUserProfile 호출
 							getKakaotalkUserProfile();
-							/* Kakao.Auth.setAccessToken(accessTokenFromServer); */
 							/* Kakao.Auth.setAccessToken(authObj.access_token); */
 						},
 						//카카오 로그인 실패
@@ -124,15 +123,14 @@
 						    }
 						});
 						//kakao-profile div에 해당 정보 출력
-				 		$("#kakao-profile").append(res.properties.nickname);
+				 		$("#kakao-profile").append(res.properties.nickname);	//닉네임
 				 		$("#kakao-profile").append($("<img/>",{"src":res.properties.profile_image,
-				 			"alt":res.properties.nickname+"님의 프로필 사진"}));
-				 		$("#kakao-profile").append(res.kakao_account.email);
-				 		$("#kakao-profile").append(res.id);
-				 		$("#kakao-profile").append(res.kakao_account.gender);
-				 		$("#kakao-profile").append(res.kakao_account.birthday);
+				 			"alt":res.properties.nickname+"님의 프로필 사진"}));		//프로필사진
+				 		$("#kakao-profile").append(res.kakao_account.email);	//이메일
+				 		$("#kakao-profile").append(res.id);                     //아이디
+				 		$("#kakao-profile").append(res.kakao_account.gender);   //성별
+				 		$("#kakao-profile").append(res.kakao_account.birthday); //생일
 				 		
-				 		//이름, 아이디, 생년월일, 전화번호, 성별
 					},
 					//카카오 API 호출 실패
 					fail: function(error) {

@@ -108,6 +108,7 @@ body {
   }
 }
 </style>
+<decorator:head/>
 </head>
 <body>
 
@@ -126,7 +127,7 @@ body {
 <div class="row">
   <div class="leftcolumn">
     <div class="card">
-    test	
+   		<h3><decorator:title/></h3>	
      <decorator:body />
       </div> 
   </div>
