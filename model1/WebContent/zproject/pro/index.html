@@ -799,8 +799,8 @@
                                     <input id="userid" class="form-control" type="text" placeholder="id" name="userid"><br/>
                                     <input id="password" class="form-control" type="password" placeholder="Password" name="password"><br/>
                                     <input class="btn btn-default btn-login" type="button" value="Login" onclick="loginAjax()"><br/>
-                                    <input class="btn btn-default btn-login" type="button" value="kakao로 로그인" onclick=""><br/>
-                                    <input class="btn btn-default btn-login" type="button" value="둘러보기" onclick="">
+                                    <input class="btn btn-default btn-login" type="button" value="kakao로 로그인" onclick=""><br/>                                 
+                                    <div style="text-align: center;"><a href="javascript: showRegisterForm();">회원가입</a>&nbsp;&nbsp;&nbsp;<a href="javascript: showFindIdForm();">아이디찾기</a>&nbsp;&nbsp;&nbsp;<a href="javascript: showFindPwForm();">비번찾기</a></div>
                                     </form>
                                 </div>	
                                 
@@ -810,16 +810,41 @@
                             <div class="content registerBox" style="display:none;">
                              <div class="form">
                                 <form method="" html="{:multipart=>true}" data-remote="true" action="" accept-charset="UTF-8">
-                                <input id="userid" class="form-control" type="text" placeholder="id" name="userid">
+                                <div class="input-group">
+                                	<input id="userid" class="form-control" type="text" placeholder="id" name="userid"> 
+	                                <span class="input-group-btn">
+										<button class="btn btn-success" type="button" style="height: 46px;">중복확인</button>
+									</span>
+								</div>            
                                 <input id="username" class="form-control" type="text" placeholder="name" name="username">
                                 <input id="email" class="form-control" type="email" placeholder="Email" name="email">
                                 <input id="password" class="form-control" type="password" placeholder="Password" name="password">
                                 <input id="password_confirmation" class="form-control" type="password" placeholder="Repeat Password" name="password_confirmation">
                                 <input id="usertel" class="form-control" type="tel"  placeholder="phone" name="usertel">
-                                <input id="birth" class="form-control" type="date"  placeholder="birthday" name="birth">
-                                <label><input id="gender" class="form-control" type="checkbox" placeholder="gender" name="gender" value="man">man</label>
-     							<label><input id="gender" class="form-control" type="checkbox" name="gender" value="women">women</label>
+                                <input id="birth" class="form-control" type="date"  placeholder="birthday" name="birth"><br/>
+                                <label><input id="gender" class="form-control" type="radio" placeholder="gender" name="gender" value="man">man</label>
+     							<label><input id="gender" class="form-control" type="radio" name="gender" value="women">women</label>
                                 <input class="btn btn-default btn-register" type="button" value="Create account" name="commit">
+                                
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="content findIdBox" style="display:none;">
+                             <div class="form">
+                                <form method="" html="{:multipart=>true}" data-remote="true" action="" accept-charset="UTF-8">
+                                <input class="btn btn-default btn-register" type="button" value="ID찾기" name="commit">
+                                
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="content findPwBox" style="display:none;">
+                             <div class="form">
+                                <form method="" html="{:multipart=>true}" data-remote="true" action="" accept-charset="UTF-8">
+                                <input class="btn btn-default btn-register" type="button" value="PW찾기" name="commit">
                                 
                                 </form>
                                 </div>
@@ -833,6 +858,14 @@
                             </span>
                         </div>
                         <div class="forgot register-footer" style="display:none">
+                             <span>Already have an account?</span>
+                             <a href="javascript: showLoginForm();">Login</a>
+                        </div>
+                        <div class="forgot findid-footer" style="display:none">
+                             <span>Already have an account?</span>
+                             <a href="javascript: showLoginForm();">Login</a>
+                        </div>
+                        <div class="forgot findpw-footer" style="display:none">
                              <span>Already have an account?</span>
                              <a href="javascript: showLoginForm();">Login</a>
                         </div>
