@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import co.yedam.app.board.BoardCommandCreateForm;
 import co.yedam.app.board.BoardCommandSelectList;
 import co.yedam.app.boardAjax.AjaxBoardList;
+import co.yedam.app.boardAjax.GetDeptCnt;
 import co.yedam.app.users.command.DeleteUsers;
 import co.yedam.app.users.command.GetUsers;
 import co.yedam.app.users.command.GetUsersList;
@@ -60,6 +61,11 @@ public class NewFrontController extends HttpServlet {
 		cont.put("/ajax/DeleteUsers.do", new DeleteUsers());
 		cont.put("/ajax/GetUsers.do", new GetUsers());
 		cont.put("/ajax/GetUsersList.do", new GetUsersList());
+		
+		
+		cont.put("/Fileupload.do", new Fileupload());
+		//차트 데이터
+		cont.put("/ajax/GetDeptCnt.do", new GetDeptCnt());
 	}
 
 	@SuppressWarnings("unused")
@@ -77,12 +83,12 @@ public class NewFrontController extends HttpServlet {
 		String page = null;
 		response.setContentType("text/html; charset=EUC-KR");
 		if (commandImpl != null) {
+			
 			page = commandImpl.excute(request, response); //실행
 			if (page != null && !page.isEmpty()) {
 				if (page.startsWith("redirect:")) {
 					String view = page.substring(9);
 					response.sendRedirect(view);
-
 				} else if (page.startsWith("ajax:")) {
 					response.getWriter().append(page.substring(5));
 				} else if (page.startsWith("script:")) {

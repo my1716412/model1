@@ -32,6 +32,7 @@ public class DAO {
 		try {
 			Class.forName(driver);
 			conn = DriverManager.getConnection(url, user, password);
+			System.out.println("DBOpen");
 		}catch(ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
 		}
@@ -52,6 +53,8 @@ public class DAO {
 			 if(rs != null) rs.close();
 			 if(psmt != null) psmt.close();
 			 if (conn != null) conn.close();
+				System.out.println("DBClose");
+
 		 }catch (SQLException e) {
 			 e.printStackTrace();
 		 }
